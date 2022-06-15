@@ -11,7 +11,7 @@ namespace Echo.AutoCompleters
     public class DiceAutoCompleter : AutocompleteHandler
     {
         private readonly IDiceRepository _diceRepository;
-        
+
         public DiceAutoCompleter(IDiceRepository diceRepository)
         {
             _diceRepository = diceRepository;

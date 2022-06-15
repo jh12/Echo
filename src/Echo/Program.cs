@@ -17,7 +17,7 @@ namespace Echo
         private static ILogger _logger = null!;
 
         private static readonly IServiceProvider Services = ServiceProviderConfig.Create();
-        
+
         static async Task Main(string[] args)
         {
             _logger = Services.GetRequiredService<ILogger>();
