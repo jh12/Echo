@@ -4,7 +4,6 @@ on:
     branches:
       - main
       - develop
-      - feature/CICD
 
 jobs:
   release:
@@ -40,8 +39,7 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         file: Dockerfile
-        #push: true
-        push: false
+        push: true
         tags: |
           ghcr.io/${{ github.repository_owner }}/echo:latest
           ghcr.io/${{ github.repository_owner }}/echo:${{ steps.gitversion.outputs.NuGetVersionV2 }}
