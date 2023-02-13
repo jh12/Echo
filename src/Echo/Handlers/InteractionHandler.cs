@@ -41,8 +41,10 @@ namespace Echo.Handlers
             await _handler.RegisterCommandsToGuildAsync(arg.Id);
         }
 
-        private async Task ReadyAsync()
+        private Task ReadyAsync()
         {
+            return Task.CompletedTask;
+
             //if (Debugger.IsAttached)
             //await _handler.RegisterCommandsToGuildAsync(827929281899790336); // TODO
             //else
